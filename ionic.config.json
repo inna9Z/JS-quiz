@@ -1,0 +1,7 @@
+{
+  "name": "JavaScript quiz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

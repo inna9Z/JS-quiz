@@ -1,6 +1,6 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonImg } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar} from '@ionic/react';
 import Button from '../components/Button';
-import ExploreContainer from '../components/ExploreContainer';
+//import ExploreContainer from '../components/ExploreContainer';
 import Logo from '../components/Logo';
 import './Home.css';
 

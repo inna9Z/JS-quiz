@@ -11,7 +11,7 @@ const Question: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        My question 
+        My question  
       </IonContent>
     </IonPage>
   );

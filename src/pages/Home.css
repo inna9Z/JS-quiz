@@ -1,10 +1,11 @@
+
 .logo-container {
   display: flex;
   justify-content: center;
 }
 .logo {
-  width: 300px;
-  height: 200px;
+  width: 500px;
+  height: 400px;
 }
 
 .title {
@@ -12,11 +13,32 @@
   color: var(--ion-color-dark-contrast);
 }
 
-.button-container {
+.button-container  {
   text-align: center;
   position: absolute;
   left: 0;
   right: 0;
-  top: 30%;
+  top: 50%;
  
+}
+.button {
+    background-color: var(--ion-color-dark);
+    cursor: pointer;
+    --width: 200%;
+}
+
+.container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60%;
+}
+
+.content {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80%;
 }

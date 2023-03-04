@@ -5,9 +5,9 @@ import './Home.css';
 const Question: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
+       <IonHeader>
         <IonToolbar>
-          <IonTitle>Question page</IonTitle>
+          <IonTitle className = "title" >JS quiz</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

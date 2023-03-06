@@ -1,14 +1,17 @@
-import { IonButton, IonItem, IonLabel, IonList, IonPage, IonRadio, IonRadioGroup } from '@ionic/react';
+import { IonButton, IonItem, IonLabel, IonList, IonPage, IonRadio, IonRadioGroup  } from '@ionic/react';
 // import ExploreContainer from '../components/ExploreContainer';
 import './Questions.css';
+
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 const Question: React.FC = () => {
 
 
+
+
   return (
       <IonPage className='page'>
-        
+
       <div className = "content-question">
         <p>1/10</p>  
         <h4>Inside which element do you put JavaScript?</h4>

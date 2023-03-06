@@ -1,4 +1,4 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact, IonTitle, IonHeader, IonToolbar } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
@@ -71,7 +71,9 @@ const App: React.FC = () => (
           <Question />
         </Route>
 
-        
+        {/* <Route path="/">
+          <Redirect to="/" />
+        </Route> */}
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp> 

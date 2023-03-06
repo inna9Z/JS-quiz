@@ -7,7 +7,7 @@ function Button() {
   return (
       <>
        <div className="button-container">
-      <IonButton className="button" color="dark" size="large">Beginner<span>  &#128587;</span></IonButton>
+      <IonButton className="button" color="dark" size="large" routerLink="/questions">Beginner<span>  &#128587;</span></IonButton>
     </div>
     <div className="container">
       <IonButton className="btn" color="dark" size="large">Intermediate<span> 👨‍💻 </span></IonButton>

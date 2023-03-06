@@ -1,8 +1,10 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonRouterOutlet, setupIonicReact, IonTitle, IonHeader, IonToolbar } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
-import Question from './pages/Questions';
+import Question from './pages/Question';
+//import TestBeginner from './pages/TestBeginner';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -23,22 +25,53 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+// const modules = [
+//   {
+//     id: 1,
+//     path: 'beginner',
+//     name: 'Beginner',
+//     question: [
+//       {
+//         id: 1,
+//         title: 'Whotjkfnvkjf',
+//         answers: [
+//           {
+//             id: 1,
+//             name:'uihdcieuhv'
+//           }
+//         ]
+//       }
+//     ]
+    
+// },
+// {
+//     id: 2,
+//     path:  'intermediate ',
+//     name:  'Intermediate '
+// }
+// ]
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
+    <IonHeader>
+        <IonToolbar>
+          <IonTitle className = "title" >JS quiz</IonTitle>
+        </IonToolbar>
+      </IonHeader>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/home">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/question">
-       <Question/>
+
+      
+        <Route exact path="/questions">
+          <Question />
         </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
+
+        
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp> 

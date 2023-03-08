@@ -24,32 +24,9 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Result from './pages/Result';
 
-// const modules = [
-//   {
-//     id: 1,
-//     path: 'beginner',
-//     name: 'Beginner',
-//     question: [
-//       {
-//         id: 1,
-//         title: 'Whotjkfnvkjf',
-//         answers: [
-//           {
-//             id: 1,
-//             name:'uihdcieuhv'
-//           }
-//         ]
-//       }
-//     ]
-    
-// },
-// {
-//     id: 2,
-//     path:  'intermediate ',
-//     name:  'Intermediate '
-// }
-// ]
+
 
 setupIonicReact();
 
@@ -69,6 +46,10 @@ const App: React.FC = () => (
       
         <Route exact path="/questions">
           <Question />
+        </Route>
+       
+        <Route exact path="/questions/result">
+          <Result />
         </Route>
 
         {/* <Route path="/">

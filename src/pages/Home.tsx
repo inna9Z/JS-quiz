@@ -28,7 +28,7 @@ const Home: React.FC<{modules: IModule[]}> = ({modules}) => {
         </div>
        
       </IonContent>
-    </IonPage>
+    </IonPage>   
   );
 };
 

@@ -37,7 +37,7 @@ const Result: React.FC = () => {
       <IonCardHeader className="card-header">
         <IonCardTitle className="card-title">Final Result</IonCardTitle>
       {results && 
-          <IonCardSubtitle className="card-subtitle">Scores : {countResult(results).count}/ 5</IonCardSubtitle>
+          <IonCardSubtitle className="card-subtitle">Scores : {countResult(results).count}/ 10</IonCardSubtitle>
       }
       </IonCardHeader>
       <IonCardContent className="card-content">

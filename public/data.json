@@ -151,7 +151,154 @@
               "isCorrect": true
             }
           ]
+        },
+        {
+          "id": 6,
+  
+          "module": "Beginner",
+          "hint": "the command console.log will output everything that inside",
+          "title": "What is a JavaScript element that represents either TRUE or FALSE values?",
+          "answers": [
+            {
+              "id": 1,
+              "name": "RegExp",
+              "isCorrect": false
+            },
+            {
+              "id": 2,
+              "name": "Boolean",
+              "isCorrect": true
+            },
+            {
+              "id": 3,
+              "name": "Event",
+              "isCorrect": false
+            },
+            {
+              "id": 4,
+              "name": "Condition",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "id": 7,
+  
+          "module": "Beginner",
+          "hint": "the command console.log will output everything that inside",
+          "title": "In JavaScript, what element is used to store and manipulate text usually in multiples?",
+          "answers": [
+            {
+              "id": 1,
+              "name": "Strings",
+              "isCorrect": true
+            },
+            {
+              "id": 2,
+              "name": "Arrays",
+              "isCorrect": false
+            },
+            {
+              "id": 3,
+              "name": "Function",
+              "isCorrect": false
+            },
+            {
+              "id": 4,
+              "name": "Variables",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "id": 8,
+  
+          "module": "Beginner",
+          "hint": "the command console.log will output everything that inside",
+          "title": "What is the element used – and hidden – in code that explains things and makes the content more readable?",
+          "answers": [
+            {
+              "id": 1,
+              "name": "Comparisons",
+              "isCorrect": false
+            },
+            {
+              "id": 2,
+              "name": "Comments",
+              "isCorrect": true
+            },
+            {
+              "id": 3,
+              "name": "Notes",
+              "isCorrect": false
+            },
+            {
+              "id": 4,
+              "name": "Quotations",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": 9,
+  
+          "module": "Beginner",
+          "hint": "the command console.log will output everything that inside",
+          "title": "Where is the JavaScript placed inside an HTML document or page?",
+          "answers": [
+            {
+              "id": 1,
+              "name": "In the <footer> section",
+              "isCorrect": false
+            },
+            {
+              "id": 2,
+              "name": "In the <meta> section",
+              "isCorrect": false
+            },
+            {
+              "id": 3,
+              "name": "In the <body> and <head> sections",
+              "isCorrect": true
+            },
+            {
+              "id": 4,
+              "name": "In the <title> section",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": 10,
+  
+          "module": "Beginner",
+          "hint": "the command console.log will output everything that inside",
+          "title": "How do you declare a new date in JavaScript?",
+          "answers": [
+            {
+              "id": 1,
+              "name": "var date = Date()",
+              "isCorrect": true
+            },
+            {
+              "id": 2,
+              "name": "var date = date('now')",
+              "isCorrect": false
+            },
+            {
+              "id": 3,
+              "name": "var date = new Date()",
+              "isCorrect": false
+            },
+            {
+              "id": 4,
+              "name": "var date = new Date()",
+              "isCorrect": false
+            }
+          ]
         }
+
+
       ]
     }
   ]

@@ -25,13 +25,49 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Result from './pages/Result';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 
 
 setupIonicReact();
+export type IAnswers = {
+  id: number;
+  name: string;
+  isCorrect: boolean;
+}
+export type IQuestion = {
+  id: number;
+  snippet?: string;
+  module: string;
+  hint: string;
+  title: string;
+  answers: IAnswers[];
 
-const App: React.FC = () => (
-  <IonApp>
+}
+export type IModule = {
+  id: number;
+  path: string;
+  name: string;
+  questions: IQuestion[];
+}
+
+const App: React.FC = () => {
+   const [modules, setModules] = useState <IModule[]>([])
+  
+   useEffect(() => {
+    const fethModules = async () => {
+      try {
+        const {data} = await axios.get<null,{data: IModule[]}>('data.json');
+        setModules(data)
+      } catch(e) {
+        console.log(e);
+      }
+    }
+    fethModules();
+  }, []);
+  
+  return (<IonApp>
     <IonHeader>
         <IonToolbar>
           <IonTitle className = "title" >JS quiz</IonTitle>
@@ -40,24 +76,26 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/">
-          <Home />
+          <Home  modules={modules}/>
         </Route>
 
       
-        <Route exact path="/questions">
-          <Question />
+        {modules?.map((module: any) => (
+        <Route key={module.id} exact path={`/questions/${module.id}`}>
+          <Question module = {module} />
         </Route>
-       
-        <Route exact path="/questions/result">
+       ))}
+        <Route exact path="/questions/:id/result">
           <Result />
         </Route>
 
-        {/* <Route path="/">
-          <Redirect to="/" />
-        </Route> */}
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp> 
-);
+  )
+
+}
+  
+
 
 export default App;

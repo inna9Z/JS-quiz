@@ -1,66 +1,42 @@
-import { IonButton, IonItem, IonLabel, IonList, IonPage, IonRadio, IonRadioGroup  } from '@ionic/react';
-//import { useState } from 'react';
-// import ExploreContainer from '../components/ExploreContainer';
-import './Questions.css';
-//import { questions } from '../data/data';
+import { IonButton, IonPage } from "@ionic/react";
+import { IModule } from "../App";
+import { useState } from "react";
+import "./Questions.css";
+import QuestionItem from "../components/QuestionItem";
+import { useHistory } from "react-router";
 
 
-// eslint-disable-next-line @typescript-eslint/no-redeclare
-const Question: React.FC = () => {
-//   const [currentQuestion, setCurrentQuestion] = useState(1);
-//   const [score, setScore] = useState(1);
-//   const [showResults, setShowResults] = useState(false);
 
-//   const onClick = (isCorect: boolean) => {
-//     if (isCorect) {
-//       setScore(score + 1);
-//     }
-//     if (currentQuestion + 1 < questions.length) {
-//       setCurrentQuestion(currentQuestion + 1)
+const Question: React.FC<{ module: IModule }> = ({ module }) => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [result, setResult] = useState<any>({});
+  const history = useHistory()
 
-//     } else {
-//       setShowResults(true);
-//     } 
-//   } 
-
+  const next = () => {
+    if (activeSlide + 1 < module.questions.length) {
+      setActiveSlide((prev) => prev + 1);
+    } else {
+      localStorage.setItem(`module-${module.id}`, JSON.stringify(result));
+      history.push(`/questions/${module.id}/results`);
+    }
+  };
   
-//   } 
+
   return (
-      <IonPage className='page'>
-
-      <div className = "content-question">
-        <p > 1/5</p>  
-        <h4>Inside which element do you put JavaScript? ?</h4>
-       </div>
-      <IonList className = "list">
-        <IonRadioGroup allowEmptySelection={true} value="All of the above">
-         
-          <IonItem >
-            <IonLabel >'var'</IonLabel>
-            <IonRadio slot="end" color="dark" value="var"></IonRadio>
-          </IonItem>
-
-          <IonItem>
-            <IonLabel>'script'</IonLabel>
-            <IonRadio color="dark" slot="end" value="script"></IonRadio>
-          </IonItem>
-
-          <IonItem>
-            <IonLabel> 'section'</IonLabel>
-            <IonRadio color="dark" slot="end" value="section"></IonRadio>
-          </IonItem>
-
-          <IonItem>
-            <IonLabel> 'code'</IonLabel>
-            <IonRadio slot="end" color="dark" value="code"></IonRadio>
-          </IonItem>
-        </IonRadioGroup>
-        </IonList>
-        <IonButton className='next' color="dark"  >Next</IonButton> 
-
+    <IonPage className="page">
+      {module?.questions.map((question, i) => (
+        <QuestionItem
+          key={question.id}
+          activeSlide={activeSlide}
+          index={i}
+          question={question}
+          setResult={setResult}
+        />
+      ))}
+      <IonButton onClick={next} className="next" color="dark">
+        {module.questions.length > activeSlide + 1 ? "Next" : "Submit"}
+      </IonButton>
     </IonPage>
   );
-  
-
-  }
+};
 export default Question;

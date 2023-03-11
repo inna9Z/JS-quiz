@@ -1,12 +1,8 @@
-.card {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
 .card-header {
   background-color: rgb(255, 222, 33, 255);
   color: black;
   text-align: center;
+  margin-top: 10px;
 }
 
 .card-title {

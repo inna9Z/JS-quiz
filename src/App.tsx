@@ -1,5 +1,5 @@
 import { Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact, IonTitle, IonHeader, IonToolbar } from '@ionic/react';
+import { IonApp, setupIonicReact, IonTitle, IonHeader, IonToolbar } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import Question from './pages/Question';
@@ -74,9 +74,9 @@ const App: React.FC = () => {
         </IonToolbar>
       </IonHeader>
     <IonReactRouter>
-      <IonRouterOutlet>
+  
         <Route exact path="/">
-          <Home  modules={modules}/>
+          <Home modules={modules}/>
         </Route>
 
       
@@ -85,11 +85,11 @@ const App: React.FC = () => {
           <Question module = {module} />
         </Route>
        ))}
-        <Route exact path="/questions/:id/result">
+        <Route exact path="/questions/:id/results">
           <Result />
         </Route>
 
-      </IonRouterOutlet>
+     
     </IonReactRouter>
   </IonApp> 
   )

@@ -1,4 +1,4 @@
-import { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent } from "@ionic/react";
+import {  IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonPage } from "@ionic/react";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import './Result.css';
@@ -31,19 +31,19 @@ const Result: React.FC = () => {
     if (data) {
       setResults(JSON.parse(data));
     }
-  }, []);
+  }, [history.location.pathname]);
   return (
-    <IonCard className="card">
+    <IonPage className="card">
       <IonCardHeader className="card-header">
         <IonCardTitle className="card-title">Final Result</IonCardTitle>
       {results && 
-          <IonCardSubtitle className="card-subtitle">Scores : {countResult(results).count}/ {countResult(results).total}</IonCardSubtitle>
+          <IonCardSubtitle className="card-subtitle">Scores : {countResult(results).count}/ 5</IonCardSubtitle>
       }
       </IonCardHeader>
       <IonCardContent className="card-content">
         <p className="score">/</p>
       </IonCardContent>
-    </IonCard>
+    </IonPage>
   );
 };
 

@@ -6,7 +6,7 @@
       "questions": [
         {
           "id": 1,
-          "snippet": "console.log(1)",
+  
           "module": "Beginner",
           "hint": "the command console.log will output everything that inside",
           "title": "Inside which element do you put JavaScript? ?",
@@ -35,7 +35,7 @@
         },
         {
           "id": 2,
-          "snippet": "console.log(1)",
+          
           "module": "Beginner",
           "hint": "the command console.log will output everything that inside",
           "title":
@@ -65,7 +65,7 @@
         },
         {
           "id": 3,
-          "snippet": "console.log(1)",
+      
           "module": "Beginner",
           "hint": "the command console.log will output everything that inside",
           "title":
@@ -95,7 +95,7 @@
         },
         {
           "id": 4,
-          "snippet": "console.log(1)",
+  
           "module": "Beginner",
           "hint": "the command console.log will output everything that inside",
           "title":
@@ -125,7 +125,7 @@
         },
         {
           "id": 5,
-          "snippet": "console.log(1)",
+  
           "module": "Beginner",
           "hint": "the command console.log will output everything that inside",
           "title": "How can a datatype be declared to be a constant type?",

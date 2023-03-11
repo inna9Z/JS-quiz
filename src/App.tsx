@@ -3,6 +3,7 @@ import { IonApp, setupIonicReact, IonTitle, IonHeader, IonToolbar } from '@ionic
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import Question from './pages/Question';
+
 //import TestBeginner from './pages/TestBeginner';
 
 

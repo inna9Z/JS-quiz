@@ -10,7 +10,7 @@ import { useHistory } from "react-router";
 const Question: React.FC<{ module: IModule }> = ({ module }) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [result, setResult] = useState<any>({});
-  const history = useHistory()
+  const history = useHistory();
 
   const next = () => {
     if (activeSlide + 1 < module.questions.length) {
